@@ -1,0 +1,15 @@
+[user]
+	email = calvin.tran@datadoghq.com
+	name = Calvin Tran
+[core]
+	hooksPath = /usr/local/dd/global_hooks
+[include]
+	path = /Users/calvin.tran/.config/gitsign/gitconfig
+[maintenance]
+	repo = /Users/calvin.tran/go/src/github.com/DataDog/dd-source
+[feature]
+manyFiles = true
+[core]
+fsmonitor = true
+[index]
+threads = true
