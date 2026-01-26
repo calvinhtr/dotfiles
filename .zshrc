@@ -108,3 +108,5 @@ export GOPATH="$HOME/go"
 export GOLANG_PROTOBUF_REGISTRATION_CONFLICT=warn
 export PATH="$PATH:$HOME/bin:$GOPATH/bin"
 export PATH="$HOME/.local/bin:$PATH"
+# Source GitLab token from separate file (for security)
+[[ -f ~/.gitlab_token ]] && source ~/.gitlab_token
