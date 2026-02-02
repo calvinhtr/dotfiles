@@ -103,7 +103,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-eval "$(dd-gitsign load-key)"
 export GOPATH="$HOME/go"
 export GOLANG_PROTOBUF_REGISTRATION_CONFLICT=warn
 export PATH="$PATH:$HOME/bin:$GOPATH/bin"
