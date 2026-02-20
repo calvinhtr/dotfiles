@@ -1,6 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
+# Fix TMPDIR to use user-writable temp directory
+export TMPDIR=$(getconf DARWIN_USER_TEMP_DIR)
+
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -103,9 +106,18 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+eval "$(dd-gitsign load-key)"
 export GOPATH="$HOME/go"
 export GOLANG_PROTOBUF_REGISTRATION_CONFLICT=warn
 export PATH="$PATH:$HOME/bin:$GOPATH/bin"
 export PATH="$HOME/.local/bin:$PATH"
 # Source GitLab token from separate file (for security)
 [[ -f ~/.gitlab_token ]] && source ~/.gitlab_token
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+
+# Aliases
+alias ssh1="ssh -R 2586:localhost:2586 workspace-calvin-tran"
+alias clawd="claude --dangerously-skip-permissions"
