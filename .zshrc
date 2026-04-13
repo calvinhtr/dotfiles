@@ -1,9 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
-# Fix TMPDIR to use user-writable temp directory
-export TMPDIR=$(getconf DARWIN_USER_TEMP_DIR)
-
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -106,7 +103,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-eval "$(dd-gitsign load-key)"
 export GOPATH="$HOME/go"
 export GOLANG_PROTOBUF_REGISTRATION_CONFLICT=warn
 export PATH="$PATH:$HOME/bin:$GOPATH/bin"
